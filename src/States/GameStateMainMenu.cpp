@@ -13,8 +13,6 @@
 #include <libintl.h>
 #include <locale.h>
 #define _(STRING) gettext(STRING)
-#include <stdlib.h>
-#define _(STRING) gettext(STRING)
 
 enum NamesToEasilyIdentifyTheMenuItemsInsteadOfRawNumbers
 {

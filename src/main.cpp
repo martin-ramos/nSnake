@@ -10,6 +10,9 @@ int main(int argc, char *argv[])
 {
 	try
 	{
+		setlocale(LC_ALL, "");
+		bindtextdomain("GameStateMainMenu", "./po");
+		textdomain("GameStateMainMenu");
 		// Settings
 		EngineGlobals::init();
 		Globals::init();
@@ -39,4 +42,3 @@ int main(int argc, char *argv[])
 	}
 	return 0;
 }
-

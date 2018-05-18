@@ -38,8 +38,8 @@ void WindowGameHelp::run()
 		this->windows[activatedIndex]->clear();
 
 		this->main->print(((activatedIndex == 0) ?
-		                   "(Help)" :
-		                   " Help "),
+		                   _("(Help)") :
+		                   _(" Help ")),
 		                  2,
 		                  0,
 		                  ((activatedIndex == 0) ?
@@ -47,8 +47,8 @@ void WindowGameHelp::run()
 		                   EngineGlobals::Theme::hilite_text));
 
 		this->main->print(((activatedIndex == 1) ?
-		                   "(Credits)" :
-		                   " Credits "),
+		                   _("(Credits)") :
+		                   _(" Credits ")),
 		                  12,
 		                  0,
 		                  ((activatedIndex == 1) ?
@@ -65,17 +65,17 @@ void WindowGameHelp::run()
 		// Help Window
 		if (activatedIndex == 0)
 		{
-			this->windows[0]->print("In-game controls:\n",
+			this->windows[0]->print(_("In-game controls:\n"),
 			                        0, 0,
 			                        EngineGlobals::Theme::hilite_text);
 
-			this->windows[0]->print(Utils::String::split("Move up\n"
-			                                             "Move down\n"
-			                                             "Move left\n"
-			                                             "Move right\n"
-			                                             "Pause game\n"
-			                                             "Quit anytime\n"
-			                                             "Show help", '\n'),
+			this->windows[0]->print(Utils::String::split(_("Move up\n")
+			                                             _("Move down\n")
+			                                             _("Move left\n")
+			                                             _("Move right\n")
+			                                             _("Pause game\n")
+			                                             _("Quit anytime\n")
+			                                             _("Show help", '\n')),
 			                        1, 1,
 			                        EngineGlobals::Theme::hilite_text);
 
@@ -89,7 +89,7 @@ void WindowGameHelp::run()
 			                        14, 1,
 			                        EngineGlobals::Theme::text);
 
-			this->windows[0]->print("Menu controls:\n",
+			this->windows[0]->print(_("Menu controls:\n"),
 			                        0, 9,
 			                        EngineGlobals::Theme::hilite_text);
 
@@ -161,4 +161,3 @@ void WindowGameHelp::run()
 			return;
 	}
 }
-

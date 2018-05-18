@@ -79,4 +79,3 @@ void GameStateGame::draw()
 	if (! this->willQuit)
 		this->game->draw();
 }
-

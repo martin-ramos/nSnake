@@ -40,7 +40,7 @@ void LayoutMainMenu::windowsInit()
 	                        55, 0,
 	                        24, WINDOW_FILL);
 
-	this->menu->setTitle("Main Menu");
+	this->menu->setTitle(_("Main Menu"));
 	this->menu->refresh();
 
 	// ANIMATION
@@ -116,4 +116,3 @@ void LayoutMainMenu::draw(Menu* menu)
 	// NCURSES NEEDS THIS
 	refresh();
 }
-

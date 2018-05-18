@@ -10,7 +10,9 @@
 
 #include <Engine/Flow/StateManager.hpp>
 #include <States/GameStateGame.hpp>
-#include <stdlib.h>
+
+#include <libintl.h>
+#include <locale.h>
 #define _(STRING) gettext(STRING)
 
 
@@ -353,16 +355,16 @@ void GameStateMainMenu::createMainMenu()
 	item = new MenuItem(_("Arcade Mode"), ARCADE);
 	menu->add(item);
 
-	item = new MenuItem("Level Select", LEVELS);
+	item = new MenuItem(_("Level Select"), LEVELS);
 	menu->add(item);
 
-	item = new MenuItem("Game Settings", GAME_SETTINGS);
+	item = new MenuItem(_("Game Settings"), GAME_SETTINGS);
 	menu->add(item);
 
-	item = new MenuItem("GUI Options", GUI_OPTIONS);
+	item = new MenuItem(_("GUI Options"), GUI_OPTIONS);
 	menu->add(item);
 
-	item = new MenuItem("Controls", CONTROLS);
+	item = new MenuItem(_("Controls"), CONTROLS);
 	menu->add(item);
 
 	item = new MenuItem("Help", HELP);

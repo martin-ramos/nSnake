@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	try
 	{
 		setlocale(LC_ALL, "");
- 		bindtextdomain("nsnake", "src/lang" );
+ 		bindtextdomain("nsnake", "lang" );
  		textdomain("nsnake");
 
 		// Settings

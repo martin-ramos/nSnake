@@ -221,3 +221,5 @@ $(COMMANDER_DIR)/%.o: $(COMMANDER_DIR)/%.c
 	# Compiling $<...
 	$(MUTE)$(CC) $(COMMANDER_CFLAGS) $< -c -o $@
 
+#LC_ALL=C
+LANGUAGE=en

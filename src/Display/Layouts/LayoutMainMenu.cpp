@@ -11,6 +11,10 @@
 
 #include <iostream>
 
+#include <libintl.h>
+#include <locale.h>
+#define _(STRING) gettext(STRING)
+
 LayoutMainMenu::LayoutMainMenu(int width, int height, GameStateMainMenu* state):
 	Layout(width, height),
 	state(state),

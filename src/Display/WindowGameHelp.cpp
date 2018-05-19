@@ -5,6 +5,10 @@
 #include <Engine/InputManager.hpp>
 #include <Engine/Helpers/Utils.hpp>
 
+#include <libintl.h>
+#include <locale.h>
+#define _(STRING) gettext(STRING)
+
 WindowGameHelp::WindowGameHelp()
 {
 	int width  = 40;
@@ -69,13 +73,13 @@ void WindowGameHelp::run()
 			                        0, 0,
 			                        EngineGlobals::Theme::hilite_text);
 
-			this->windows[0]->print(Utils::String::split(_("Move up\n")
-			                                             _("Move down\n")
-			                                             _("Move left\n")
-			                                             _("Move right\n")
-			                                             _("Pause game\n")
-			                                             _("Quit anytime\n")
-			                                             _("Show help", '\n')),
+			this->windows[0]->print(Utils::String::split(_("Move up\n"
+			                                             "Move down\n"
+			                                             "Move left\n"
+			                                             "Move right\n"
+			                                             "Pause game\n"
+			                                             "Quit anytime\n"
+			                                             "Show help"), '\n'),
 			                        1, 1,
 			                        EngineGlobals::Theme::hilite_text);
 
@@ -93,18 +97,18 @@ void WindowGameHelp::run()
 			                        0, 9,
 			                        EngineGlobals::Theme::hilite_text);
 
-			this->windows[0]->print(Utils::String::split("First item\n"
-			                                             "Last item", '\n'),
+			this->windows[0]->print(Utils::String::split(_("First item\n"
+			                                             "Last item"), '\n'),
 			                        1, 10,
 			                        EngineGlobals::Theme::hilite_text);
 
-			this->windows[0]->print(Utils::String::split("page up\n"
-			                                             "page down", '\n'),
+			this->windows[0]->print(Utils::String::split(_("page up\n"
+			                                             "page down"), '\n'),
 			                        14, 10,
 			                        EngineGlobals::Theme::text);
 
-			this->windows[0]->print(Utils::String::split(" Settings and scores are stored at:\n"
-			                                             " `~/.local/share/nsnake/`", '\n'),
+			this->windows[0]->print(Utils::String::split(_(" Settings and scores are stored at:\n"
+			                                             " `~/.local/share/nsnake/`"), '\n'),
 			                        0, 13,
 			                        EngineGlobals::Theme::text);
 		}
@@ -121,7 +125,7 @@ void WindowGameHelp::run()
 			                        0, 3,
 			                        Colors::pair("green", "default", true));
 
-			this->windows[1]->print(Utils::String::split("Try `nsnake --help` and `man nsnake`\n"
+			this->windows[1]->print(Utils::String::split(_("Try `nsnake --help` and `man nsnake`\n"
 			                                             "\n"
 			                                             "Game made by Alexandre Dantas,\n"
 			                                             "contact him at <eu@alexdantas.net>\n"
@@ -130,7 +134,7 @@ void WindowGameHelp::run()
 			                                             "Homepage:\n"
 			                                             " http://nsnake.alexdantas.net/\n"
 			                                             "Source Code:\n"
-			                                             " https://github.com/alexdantas/nsnake/", '\n'),
+			                                             " https://github.com/alexdantas/nsnake/"), '\n'),
 			                        0, 5, EngineGlobals::Theme::text);
 		}
 

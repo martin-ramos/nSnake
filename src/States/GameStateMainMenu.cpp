@@ -273,13 +273,19 @@ void GameStateMainMenu::update()
 				// If not, we should stay at the main menu.
 				if (BoardParser::listLevels().size() == 0)
 							   {
-									   Dialog::show(_("Sorry, it seems you have no levels.\n"
-													"Please copy the default level files from\n"
-													"`" SYSTEM_LEVEL_DIR "/`\n"
-													"to\n"
-													"`" + BoardParser::directory + "`\n" +
-													"You can also download more levels from the website:\n"
-													"http://nsnake.alexdantas.net/"), true);
+								   	   std::string str1 = _("Sorry, it seems you have no levels. \n");
+									   std::string str2 = _("Please copy the default level files from \n");
+									   std::string str3 = "`" SYSTEM_LEVEL_DIR "/`\n";
+									   std::string str4 = _("to\n");
+									   std::string str5 = "`" + BoardParser::directory + "`\n";
+									   std::string str6 = _("You can also download more levels from the website:\n");
+									   std::string str7 = "http://nsnake.alexdantas.net/";
+									   Dialog::show(str1 + str2 + str3 + str4 + str5 + str6 + str7, true);
+													//"`" SYSTEM_LEVEL_DIR "/`\n"
+													//"to\n"
+													//"`" + BoardParser::directory + "`\n" +
+													//"You can also download more levels from the website:\n"
+													//"http://nsnake.alexdantas.net/"), true);
 							   }
 
 				else

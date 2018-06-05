@@ -15,7 +15,6 @@
 #include <locale.h>
 #define _(STRING) gettext(STRING)
 
-
 enum NamesToEasilyIdentifyTheMenuItemsInsteadOfRawNumbers
 {
 	// Main Menu
@@ -88,7 +87,6 @@ void GameStateMainMenu::load()
 	createControlsMenu();
 
 	this->helpWindows = new WindowGameHelp();
-
 }
 
 void GameStateMainMenu::unload()

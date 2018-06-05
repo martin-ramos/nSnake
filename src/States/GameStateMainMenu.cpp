@@ -272,7 +272,7 @@ void GameStateMainMenu::update()
 				// the user has any levels on the level directory.
 				// If not, we should stay at the main menu.
 				if (BoardParser::listLevels().size() == 0)
-							   {
+							   {	   // Change concat string of Dialog::show for the spanish translation
 								   	   std::string str1 = _("Sorry, it seems you have no levels. \n");
 									   std::string str2 = _("Please copy the default level files from \n");
 									   std::string str3 = "`" SYSTEM_LEVEL_DIR "/`\n";

@@ -79,15 +79,16 @@ Check file `INSTALL.md` for more info.
 For translate other languages
 1. Create directory for the specific language such as    
     es_AR/LC_MESSAGES/po into lang directory
-         mkdir  es_AR/LC_MESSAGES/po -p
+        $ mkdir  es_AR/LC_MESSAGES/po -p
+
 2. Copy template nsnake.po to created directory
-         cp nsnake.po  es_AR/LC_MESSAGES/po
+        $ cp nsnake.po  es_AR/LC_MESSAGES/po
 3. Translate text into template
 4. Move to LC_MESSAGES directory
 4. Exectute msgfmt -c -v -o nsnake.mo po/nsnake.po, this    
    command compile nsnake.po and generate nsnake.mo
    which uses the compiled system
-        msgfmt -c -v -o nsnake.mo po/nsnake.po
+        $ msgfmt -c -v -o nsnake.mo po/nsnake.po
 
 ## Contact
 

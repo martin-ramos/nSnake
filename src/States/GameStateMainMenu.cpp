@@ -281,11 +281,6 @@ void GameStateMainMenu::update()
 									   std::string str6 = _("You can also download more levels from the website:\n");
 									   std::string str7 = "http://nsnake.alexdantas.net/";
 									   Dialog::show(str1 + str2 + str3 + str4 + str5 + str6 + str7, true);
-													//"`" SYSTEM_LEVEL_DIR "/`\n"
-													//"to\n"
-													//"`" + BoardParser::directory + "`\n" +
-													//"You can also download more levels from the website:\n"
-													//"http://nsnake.alexdantas.net/"), true);
 							   }
 
 				else

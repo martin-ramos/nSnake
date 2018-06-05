@@ -273,13 +273,13 @@ void GameStateMainMenu::update()
 				// If not, we should stay at the main menu.
 				if (BoardParser::listLevels().size() == 0)
 							   {
-									   Dialog::show("Sorry, it seems you have no levels.\n"
+									   Dialog::show(_("Sorry, it seems you have no levels.\n"
 													"Please copy the default level files from\n"
 													"`" SYSTEM_LEVEL_DIR "/`\n"
 													"to\n"
 													"`" + BoardParser::directory + "`\n" +
 													"You can also download more levels from the website:\n"
-													"http://nsnake.alexdantas.net/", true);
+													"http://nsnake.alexdantas.net/"), true);
 							   }
 
 				else

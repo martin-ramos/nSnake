@@ -6,6 +6,8 @@
 #include <Engine/Graphics/Widgets/Menu.hpp>
 #include <Engine/Graphics/Widgets/Menu/MenuAlphabetic.hpp>
 #include <Display/WindowGameHelp.hpp>
+#include <libintl.h>
+#define _(STRING) gettext(STRING)
 
 /// The Main Menu.
 ///
@@ -54,4 +56,3 @@ private:
 };
 
 #endif //GAMESTATEMAINMENU_H_DEFINED
-

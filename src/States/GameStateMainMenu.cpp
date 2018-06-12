@@ -13,6 +13,8 @@
 #include <libintl.h>
 #include <locale.h>
 #define _(STRING) gettext(STRING)
+#include <stdlib.h>
+#define _(STRING) gettext(STRING)
 
 enum NamesToEasilyIdentifyTheMenuItemsInsteadOfRawNumbers
 {
@@ -86,6 +88,7 @@ void GameStateMainMenu::load()
 	createControlsMenu();
 
 	this->helpWindows = new WindowGameHelp();
+
 }
 
 void GameStateMainMenu::unload()
@@ -349,7 +352,7 @@ void GameStateMainMenu::createMainMenu()
 
 	MenuItem* item;
 
-	item = new MenuItem("Arcade Mode", ARCADE);
+	item = new MenuItem(_("Arcade Mode"), ARCADE);
 	menu->add(item);
 
 	item = new MenuItem(_("Level Select"), LEVELS);

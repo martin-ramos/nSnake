@@ -115,9 +115,6 @@ public:
 	void scrollUp();
 	void scrollDown();
 
-	// Returns size of board
-	int getSize();
-
 private:
 	/// The actual level on the screen.
 	/// `true` means there's a wall here.
@@ -132,3 +129,4 @@ private:
 };
 
 #endif //BOARD_H_DEFINED
+

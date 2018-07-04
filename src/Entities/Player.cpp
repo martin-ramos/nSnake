@@ -163,6 +163,4 @@ void Player::increase()
 
 	this->body.push_back(Body(lastx, lasty));
 }
-int Player::getSizeMinus(int count) {
-	return this->getSize() - count;
-}
+

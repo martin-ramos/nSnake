@@ -285,7 +285,6 @@ msgid "(Help)"
 msgstr "(Ayuda)"
 msgid " Help "
 msgstr " Ayuda "
+
 msgid "Menu controls:\n"
 msgstr "Controles del menu\n"
-msgid "You win"
-msgstr "Has ganado"

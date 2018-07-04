@@ -238,7 +238,4 @@ void Board::scrollDown()
 		this->board->set(j, 1, tmp);
 	}
 }
-int Board::getSize()
-{
-	return this->getW() * this->getH();
-}
+

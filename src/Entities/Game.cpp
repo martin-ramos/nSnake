@@ -4,8 +4,6 @@
 #include <Display/Layouts/LayoutGame.hpp>
 #include <Engine/InputManager.hpp>
 #include <Entities/BoardParser.hpp>
-#include <Engine/Graphics/Widgets/Dialog.hpp>
-#include <unistd.h>
 
 #include <stdlib.h>
 
@@ -225,16 +223,9 @@ void Game::handleInput()
 }
 void Game::update()
 {
-	//Fix bug game freezes when snake eats last fruit
-	if((this->player->getSizeMinus(1)) >= this->board->getSize())
-	{
-		Dialog::show(_("You win"));
-		//Thread sleeps 2 seconds for dialog "You win"
-		usleep(2000000);
-		this->gameOver = true;
-	}
 	if (this->gameOver)
 		return;
+
 	// If we're paused, only handle the menu.
 	if (this->isPaused)
 	{
